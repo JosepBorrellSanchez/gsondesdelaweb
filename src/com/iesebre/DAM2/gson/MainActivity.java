@@ -67,16 +67,22 @@ public class MainActivity extends Activity {
 			  public String getPersonaName() {
 				return persona.person_givenName;
 			}
+			  public int getPersonaId(){
+				  return persona.person_id;
+			  }
+			  
 
 			protected void onProgressUpdate(Long... progress) {
 			    Log.d("MyApp", "Downloaded bytes: " + progress[0]);
 			  }
 
 			  protected void onPostExecute(String string) {
-			   
-				  TextView mytext = (TextView) findViewById(R.id.textView2);
+				  TextView nom = (TextView) findViewById(R.id.textView4);
+				  TextView id = (TextView) findViewById(R.id.textView2);
 			     // mytext.setText(string);
 			      Log.d("MyApp", "Json de la web: " + persona.person_givenName);
+			      nom.setText(persona.person_givenName);
+			      id.setText(persona.person_id.toString());
 
 			  }
 			  

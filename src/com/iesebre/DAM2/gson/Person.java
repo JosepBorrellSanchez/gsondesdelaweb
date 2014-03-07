@@ -1,7 +1,7 @@
 package com.iesebre.DAM2.gson;
 
 public class Person {
-	int person_id;
+	Integer person_id;
 	String person_givenName;
 	String person_sn1;
 	String person_sn2;
